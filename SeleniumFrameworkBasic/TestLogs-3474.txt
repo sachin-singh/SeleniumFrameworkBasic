@@ -1,0 +1,8 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/04 16:45:51
+Logging in.... @ 2012/10/04 16:45:58
+Navigating to DNC Page.... @ 2012/10/04 16:46:14
+Navigating to DNC Lists Page....2012/10/04 16:46:18
+Adding new DNC List....2012/10/04 16:46:25
+ExampleDNCList FOUND!

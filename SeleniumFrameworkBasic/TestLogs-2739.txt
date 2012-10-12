@@ -1,0 +1,7 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/09 13:22:57
+Registeration Page Loaded @ 2012/10/09 13:23:09
+Logging in as Admin.... @ 2012/10/09 13:23:43
+Signing out... @2012/10/09 13:23:58
+Logging in.... @ 2012/10/09 13:24:05

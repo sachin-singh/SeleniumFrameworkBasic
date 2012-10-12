@@ -1,0 +1,61 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/09 13:37:58
+Registeration Page Loaded @ 2012/10/09 13:38:07
+Logging in as Admin.... @ 2012/10/09 13:40:05
+Signing out... @2012/10/09 13:40:26
+Logging in.... @ 2012/10/09 13:40:34
+Creating CallCenter.... @2012/10/09 13:40:48
+Error: CallCenter during creation....@ 2012/10/09 13:41:15
+Signing out... @2012/10/09 13:41:15
+Logging in.... @ 2012/10/09 13:41:25
+Navigating to Profile Page....2012/10/09 13:41:43
+Updating Call Center Profile.... @2012/10/09 13:41:43
+Error: While updating profile....@ 2012/10/09 13:42:01
+Signing out... @2012/10/09 13:42:01
+Logging in.... @ 2012/10/09 13:42:10
+Navigating to Project Page.... @ 2012/10/09 13:42:27
+Creating Project Project x.... @2012/10/09 13:42:32
+New project successfully created.
+Signing out... @2012/10/09 13:42:45
+Logging in.... @ 2012/10/09 13:42:53
+Moving to Agent Page.... @2012/10/09 13:43:11
+Agent Alex1 added succesfully @2012/10/09 13:43:22
+Signing out... @2012/10/09 13:43:22
+Logging in.... @ 2012/10/09 13:43:32
+Navigating to Project Page.... @ 2012/10/09 13:43:51
+Moving inside Project x.... @2012/10/09 13:43:51
+Inside Project x.... @2012/10/09 13:44:09
+Assigning Agents .... @2012/10/09 13:44:09
+Signing out... @2012/10/09 13:44:21
+Logging in as Admin.... @ 2012/10/09 13:44:30
+Entering in sachin_rcz@yahoo.co.in's Call Center.... @ 2012/10/09 13:44:45
+Error: While Entering in sachin_rcz@yahoo.co.in's Call Center.... @ 2012/10/09 13:45:08
+Navigating to CCHomePage.... @ 2012/10/09 13:45:08
+Error: During navigating to MyCallCenter Page @ 2012/10/09 13:45:28
+Navigating to Buy Packages Page....2012/10/09 13:45:28
+Adding Package....2012/10/09 13:45:32
+Error: While Adding Package....2012/10/09 13:47:27
+Signing out... @2012/10/09 13:47:27
+Logging in.... @ 2012/10/09 13:47:37
+Moving to Agent Page.... @2012/10/09 13:47:53
+Moving inside Alex.... @2012/10/09 13:47:56
+Inside Alex.... @2012/10/09 13:48:04
+Navigating to Agent Assign Package Page....2012/10/09 13:48:04
+Assigning Package to Agent.... @2012/10/09 13:48:08
+Signing out... @2012/10/09 13:48:09
+Logging in.... @ 2012/10/09 13:48:17
+Navigating to CRM Page.... @ 2012/10/09 13:48:35
+Navigating to Import Leads Page....2012/10/09 13:48:40
+Importing Leads.... @2012/10/09 13:48:53
+Signing out... @2012/10/09 13:49:09
+Logging in.... @ 2012/10/09 13:49:17
+Navigating to CRM Page.... @ 2012/10/09 13:49:34
+Step 1 while Assinging all available leads in Project x.... @2012/10/09 13:49:35
+Step 2 while Assinging all available leads in Project x.... @2012/10/09 13:49:51
+Step 3 while Assinging all available leads in Project x.... @2012/10/09 13:49:54
+Step 4 while Assinging all available leads in Project x.... @2012/10/09 13:49:55
+Assigned 220 leads successfully.... @2012/10/09 13:49:57
+Signing out... @2012/10/09 13:49:57
+Test completed @ 2012/10/09 13:50:00
+==========================================

@@ -1,0 +1,8 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/09 13:35:42
+Registeration Page Loaded @ 2012/10/09 13:35:51
+Logging in as Admin.... @ 2012/10/09 13:36:13
+Error: During Account Activation @ 2012/10/09 13:36:44
+Signing out... @2012/10/09 13:36:44
+Logging in.... @ 2012/10/09 13:36:52

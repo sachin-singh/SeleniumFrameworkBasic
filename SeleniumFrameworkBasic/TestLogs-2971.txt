@@ -1,0 +1,7 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/08 12:19:17
+Logging in.... @ 2012/10/08 12:19:24
+Creating CallCenter.... @2012/10/08 12:19:44
+Error: CallCenter during creation....@ 2012/10/08 12:20:29
+Signing out... @2012/10/08 12:20:29

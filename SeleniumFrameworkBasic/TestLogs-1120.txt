@@ -1,0 +1,11 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/05 16:09:47
+Logging in as Admin.... @ 2012/10/05 16:09:49
+Creating New Account by Admin.... @ 2012/10/05 16:09:55
+Signing out... @2012/10/05 16:10:01
+Logging in.... @ 2012/10/05 16:10:02
+Creating CallCenter.... @2012/10/05 16:10:04
+Signing out... @2012/10/05 16:10:09
+Test completed @ 2012/10/05 16:10:09
+==========================================

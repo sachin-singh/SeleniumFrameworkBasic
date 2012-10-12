@@ -1,0 +1,4 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/09 12:59:36
+Registeration Page Loaded @ 2012/10/09 12:59:45

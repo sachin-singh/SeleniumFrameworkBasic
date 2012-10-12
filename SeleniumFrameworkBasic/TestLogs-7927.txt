@@ -1,0 +1,53 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/08 15:03:35
+Logging in.... @ 2012/10/08 15:03:41
+Creating CallCenter.... @2012/10/08 15:04:01
+Error: While Creating CallCenter.... @2012/10/08 15:04:32
+Error: CallCenter during creation....@ 2012/10/08 15:04:46
+Signing out... @2012/10/08 15:04:46
+Logging in.... @ 2012/10/08 15:04:55
+Navigating to Profile Page....2012/10/08 15:05:12
+Updating Call Center Profile.... @2012/10/08 15:05:12
+Error: While updating profile....@ 2012/10/08 15:05:35
+Signing out... @2012/10/08 15:05:35
+Logging in.... @ 2012/10/08 15:05:44
+Navigating to Project Page.... @ 2012/10/08 15:05:59
+Creating Project Project x.... @2012/10/08 15:06:05
+New project successfully created.
+Signing out... @2012/10/08 15:06:17
+Logging in.... @ 2012/10/08 15:06:26
+Moving to Agent Page.... @2012/10/08 15:06:43
+Agent Alex added succesfully @2012/10/08 15:06:55
+Signing out... @2012/10/08 15:06:55
+Logging in.... @ 2012/10/08 15:07:04
+Navigating to Project Page.... @ 2012/10/08 15:07:21
+Moving inside Project x.... @2012/10/08 15:07:21
+Inside Project x.... @2012/10/08 15:07:37
+Assigning Agents .... @2012/10/08 15:07:37
+Signing out... @2012/10/08 15:07:49
+Logging in as Admin.... @ 2012/10/08 15:07:59
+Entering in madagascar@3clogic.com's Call Center.... @ 2012/10/08 15:08:12
+Error: While Entering in madagascar@3clogic.com's Call Center.... @ 2012/10/08 15:08:35
+Navigating to CCHomePage.... @ 2012/10/08 15:08:35
+Error: During navigating to MyCallCenter Page @ 2012/10/08 15:08:56
+Navigating to Buy Packages Page....2012/10/08 15:08:56
+Adding Package....2012/10/08 15:08:56
+Error: While Adding Package....2012/10/08 15:10:56
+Signing out... @2012/10/08 15:10:56
+Logging in.... @ 2012/10/08 15:11:05
+Moving to Agent Page.... @2012/10/08 15:11:22
+Moving inside Alex.... @2012/10/08 15:11:25
+Inside Alex.... @2012/10/08 15:11:33
+Navigating to Agent Assign Package Page....2012/10/08 15:11:33
+Assigning Package to Agent.... @2012/10/08 15:11:36
+Signing out... @2012/10/08 15:11:37
+Logging in.... @ 2012/10/08 15:11:45
+Navigating to CRM Page.... @ 2012/10/08 15:12:02
+Navigating to Import Leads Page....2012/10/08 15:12:07
+Importing Leads.... @2012/10/08 15:12:18
+Error: While Importing Leads.... @2012/10/08 15:12:40
+Signing out... @2012/10/08 15:12:40
+Logging in.... @ 2012/10/08 15:12:50
+Test completed @ 2012/10/08 15:13:03
+==========================================

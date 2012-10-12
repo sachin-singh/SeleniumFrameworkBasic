@@ -1,0 +1,6 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/09 13:20:39
+Registeration Page Loaded @ 2012/10/09 13:20:50
+Error:During call center creation....@ 2012/10/09 13:21:26
+Logging in as Admin.... @ 2012/10/09 13:21:26

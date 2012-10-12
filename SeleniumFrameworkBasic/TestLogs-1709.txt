@@ -1,0 +1,8 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/04 16:42:51
+Logging in.... @ 2012/10/04 16:42:57
+Navigating to DNC Page.... @ 2012/10/04 16:43:17
+Adding new DNC List....2012/10/04 16:43:17
+Error: While Adding new DNC List....2012/10/04 16:43:45
+ExampleDNCList NOT FOUND!

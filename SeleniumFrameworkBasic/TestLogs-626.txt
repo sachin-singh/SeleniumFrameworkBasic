@@ -1,0 +1,6 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/12 12:56:51
+Logging in.... @ 2012/10/12 12:56:57
+Navigating to CRM Page.... @ 2012/10/12 12:57:04
+Searching Air aruba....2012/10/12 12:57:04
