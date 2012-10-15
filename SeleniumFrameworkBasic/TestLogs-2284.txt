@@ -1,5 +1,0 @@
-Reading Config
-==========================================
-Test Started @ 2012/10/08 12:11:47
-Logging in.... @ 2012/10/08 12:11:53
-Navigating to Profile Page....2012/10/08 12:12:09

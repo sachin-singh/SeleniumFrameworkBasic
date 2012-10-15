@@ -37,8 +37,11 @@
 <!-- 					<include name="importLeadsTest"></include> -->
 <!-- 					<include name="assignLeadsTest"></include> -->
 <!-- 					<include name="newTest"></include> -->
-					<include name="searchLeadTest"></include>
-              
+<!-- 					<include name="searchLeadTest"></include> -->
+<!-- 					<include name="bulkUpdateTest"></include> -->
+<!--               		<include name="addNewLeadTest"></include> -->
+<!--               		<include name="scrubLeadTest"></include> -->
+              		<include name="addLeadListTest"></include>
                
           </methods>
           </class>

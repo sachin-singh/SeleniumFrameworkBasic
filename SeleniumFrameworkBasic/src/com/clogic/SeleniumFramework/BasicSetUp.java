@@ -209,7 +209,8 @@ public class BasicSetUp {
 	
 	public void verifyTextpresent(By by, String s){
 		if(isElementPresent(by)){
-			if(driver.findElement(by).getText().equals(s)){
+			
+			if(driver.findElement(by).getText().toString().equals(s)){
 				writeText(s + " FOUND!");
 				System.out.println(s + " FOUND!");
 			}

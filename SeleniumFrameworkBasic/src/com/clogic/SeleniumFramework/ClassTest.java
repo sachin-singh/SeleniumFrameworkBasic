@@ -184,8 +184,7 @@ public class ClassTest extends BasicSetUp{
 		String callCenterCurrency=	prop.getProperty("newcc_currency");
 			
 			
-		loginPage = new LogInPage(driver, baseUrl);
-		adminHomePage = loginPage.loginAsAdmin("admin@3clogic.com", "webastra");
+		loginAdmin();
 		adminHomePage.createAccountByAdmin(email, fullName, password, role, setStatus, title, organization, address, city, state, postalCode, country, phone, recommendation);
 		adminHomePage.signOut();
 		
@@ -405,7 +404,88 @@ public class ClassTest extends BasicSetUp{
 		crmPage.signOut();
 	}
 	 
+	@Test(description = "Bulk Update Test")
+	public void bulkUpdateTest() throws Exception{
+		String path = prop.getProperty("bulk_update_list_path");
+		
+		login();
+		crmPage= callCenter.gotoCRMPage();
+		crmPage.gotoBulkUpdate();
+		crmPage.bulkupdate(path);
+		sleep(3);
+		crmPage.signOut();
+	}
 	
+	
+	@Test(description ="Add new Lead")
+	public void addNewLeadTest() throws Exception{
+		
+		String firstName = prop.getProperty("new_lead_firstName");
+		String secondName= prop.getProperty("new_lead_secondName");
+		String prefix=prop.getProperty("new_lead_prefix");
+		int mobilePhone= new Integer(prop.getProperty("new_lead_mobile"));
+		int homePhone = new Integer(prop.getProperty("new_lead_homephone"));
+		int workPhone = new Integer(prop.getProperty("new_lead_workphone"));
+		String email = prop.getProperty("new_lead_email");
+		String street = prop.getProperty("new_lead_street");
+		String street1 = prop.getProperty("new_lead_street1");
+		String street2 = prop.getProperty("new_lead_street2");
+		String city = prop.getProperty("new_lead_city");
+		String state = prop.getProperty("new_lead_state");
+		String postal = prop.getProperty("new_lead_postal");
+		String country = prop.getProperty("new_lead_country");
+		String website = prop.getProperty("new_lead_website");
+		String company = prop.getProperty("new_lead_company");
+		int employees = new Integer(prop.getProperty("new_lead_employees"));
+		String revenue= prop.getProperty("new_lead_revenue");
+		String industry = prop.getProperty("new_lead_industry");
+		String requirement = prop.getProperty("new_lead_requirement");
+		String timeZone = prop.getProperty("new_lead_timezone");
+		String language=prop.getProperty("new_lead_language");
+		String list = prop.getProperty("new_lead_list");
+		
+		login();
+		crmPage = callCenter.gotoCRMPage();
+		crmPage.gotoAddLead();
+		crmPage.addLead(firstName, secondName, prefix, mobilePhone, homePhone, workPhone, email, street, street1, street2, city, state, postal, country, website, company, employees, revenue, industry, requirement, timeZone, language, list);
+		sleep(3);
+		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		crmPage.signOut();
+		
+		
+		
+	}
+	
+	
+	@Test(description = "Scrub Lead Test")
+	public void scrubLeadTest() throws Exception {
+		String projectName = prop.getProperty("scrub_lead_project");
+		
+		login();
+		crmPage= callCenter.gotoCRMPage();
+		crmPage.gotoScrubLeads();
+		crmPage.scrubLeads(projectName);
+		sleep(3);
+		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		crmPage.signOut();
+		
+	}
+	
+	@Test(description ="Add Lead List Test")
+	public void addLeadListTest() throws Exception{
+		String listName= prop.getProperty("new_leadlist");
+		
+		login();
+		crmPage = callCenter.gotoCRMPage();
+		crmPage.gotoLeadLists();
+		crmPage.addLeadList(listName);
+		sleep(3);
+		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		crmPage.signOut();
+	}
 	
 	
 	

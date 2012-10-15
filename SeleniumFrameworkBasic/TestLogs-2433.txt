@@ -1,7 +1,0 @@
-Reading Config
-==========================================
-Test Started @ 2012/10/09 13:01:09
-Registeration Page Loaded @ 2012/10/09 13:01:18
-Account successfully created @ 2012/10/09 13:01:38
-Test completed @ 2012/10/09 13:01:38
-==========================================

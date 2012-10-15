@@ -132,13 +132,13 @@ protected final WebDriver driver;
 			
 			writeText("Bulk Updating...."+getDate());
 			System.out.println("Bulk Updating...."+getDate());
-			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("filter-toggle")));
+			new WebDriverWait(driver, 30).until(ExpectedConditions.presenceOfElementLocated(By.id("file")));
 			
-			driver.findElement(By.id("file")).clear();
-			driver.findElement(By.id("file")).sendKeys("G:\\3cLogic\\My\\Bulk_Lead.csv");
+			driver.findElement(By.id("file")).sendKeys(path);
 			driver.findElement(By.id("buttonUpload")).click();
 			driver.findElement(By.id("auto_map")).click();
 			driver.findElement(By.name("input_key")).click();
+			driver.findElement(By.id("importmodifiedleads.input.next")).click();
 			driver.findElement(By.id("valueCheckBox1")).click();
 			driver.findElement(By.xpath("(//input[@id='importmodifiedleads.input.next'])[2]")).click();
 			driver.findElement(By.id("alert_yes")).click();

@@ -1,9 +1,0 @@
-Reading Config
-==========================================
-Test Started @ 2012/10/12 12:50:12
-Logging in.... @ 2012/10/12 12:50:17
-Navigating to CRM Page.... @ 2012/10/12 12:50:24
-Searching Air aruba....2012/10/12 12:50:24
-Air aruba Not FOUND!
-Test completed @ 2012/10/12 12:50:39
-==========================================

@@ -1,5 +1,0 @@
-Reading Config
-==========================================
-Test Started @ 2012/10/03 17:48:47
-Registeration Page Loaded @ 2012/10/03 17:48:54
-Captcha ImageNOT FOUND!
