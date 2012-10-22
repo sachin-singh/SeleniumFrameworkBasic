@@ -200,7 +200,7 @@ protected final WebDriver driver;
 			driver.findElement(By.id("leaddetail_field24")).sendKeys(requirement);
 			new Select(driver.findElement(By.id("leaddetail_olsentimezone"))).selectByVisibleText(timeZone);
 			new Select(driver.findElement(By.id("leaddetail_field11"))).selectByVisibleText(language);
-			new Select(driver.findElement(By.id("applyTag_newlead"))).selectByVisibleText(list);
+//			new Select(driver.findElement(By.id("applyTag_newlead"))).selectByVisibleText(list);
 			driver.findElement(By.id("addprofile")).click();
 			
 		}

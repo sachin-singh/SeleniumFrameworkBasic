@@ -13,12 +13,16 @@ import org.apache.commons.io.FileUtils;
 
 
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 import org.openqa.selenium.remote.Augmenter;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import com.gargoylesoftware.htmlunit.BrowserVersion;
 
 /**
  * Basic SetUp Class includes function required to
@@ -29,12 +33,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BasicSetUp {
 	
-	protected WebElement webElement;
+	public WebElement webElement;
 	//The driver.
-	protected static WebDriver driver;	
-	protected static WebDriverBackedSelenium selenium;
+	public static WebDriver driver;	
+	public static WebDriverBackedSelenium selenium;
 	
-	protected WebDriverWait wait;
+	public WebDriverWait wait; 
 	
 	// A String which stores a random number in string format.
 	protected static String randoms = random();
@@ -57,6 +61,8 @@ public class BasicSetUp {
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		startTest();
 	}
+	
+	
 	
 	/**
 	 * WriteText is a function to write logs.
@@ -169,6 +175,19 @@ public class BasicSetUp {
 		} 
 		catch (Exception e) {
 			return false;
+		}
+	}
+	
+	
+	public void captureSuccessMessage() throws Exception{
+		try{
+			sleep(3);
+			writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+			System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		}
+		catch(NoSuchElementException e){
+			writeText("Success Message Not Found! ");
+			System.out.println("Success Message Not Found! ");
 		}
 	}
 	

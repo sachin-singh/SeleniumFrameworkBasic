@@ -71,7 +71,7 @@ public class ClassTest extends BasicSetUp{
 	}
 	
 	@Test(description="Log in")
-	public void login() throws Exception{
+	public void login() throws Exception{ 
 		loginPage = new LogInPage(driver, baseUrl);
 		sleep(5);
 		callCenter= loginPage.login(callCenterEmail, callCenterPassword);
@@ -164,7 +164,7 @@ public class ClassTest extends BasicSetUp{
 	@Test(description="New Account Creation by Admin")
 	public void newAccountCreationByAdminTest() throws Exception{
 		String email =prop.getProperty("newcc_email");
-		String fullName =prop.getProperty("newcc_name");
+		String fullName =prop.getProperty("newcc_fullname");
 		String password=prop.getProperty("newcc_password");
 		String role=prop.getProperty("newcc_role");
 		int setStatus= Integer.parseInt(prop.getProperty("newcc_status"));
@@ -189,10 +189,7 @@ public class ClassTest extends BasicSetUp{
 		adminHomePage.signOut();
 		
 		
-		callCenter = loginPage.login(email, password);
-		callCenter.createCallCenter(callCenterName, callCenterTimeZone, callCenterLanguage, callCenterCurrency);
-		verifyTrue((driver.getCurrentUrl().equals(baseUrl+"/ms/static/setup.html")), "Error: CallCenter during creation"); 
-		callCenter.signOut();
+		 
 	}
 	
 	
@@ -216,7 +213,7 @@ public class ClassTest extends BasicSetUp{
 		login();	
 		callCenter.gotoProfile();
 		callCenter.updateProfile(oldPassword, newPassword, confirmedNewPassword, emailAddress, fullName, address, city, state, country, zipCode, phone, timeZone, language, currency);
-		verifyTrue(selenium.isTextPresent("Your Email address has been successfully updated."), "Error: While updating profile");
+		captureSuccessMessage();
 		callCenter.signOut();
 	}
 	
@@ -448,9 +445,7 @@ public class ClassTest extends BasicSetUp{
 		crmPage = callCenter.gotoCRMPage();
 		crmPage.gotoAddLead();
 		crmPage.addLead(firstName, secondName, prefix, mobilePhone, homePhone, workPhone, email, street, street1, street2, city, state, postal, country, website, company, employees, revenue, industry, requirement, timeZone, language, list);
-		sleep(3);
-		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
-		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		captureSuccessMessage();
 		crmPage.signOut();
 		
 		
@@ -466,9 +461,7 @@ public class ClassTest extends BasicSetUp{
 		crmPage= callCenter.gotoCRMPage();
 		crmPage.gotoScrubLeads();
 		crmPage.scrubLeads(projectName);
-		sleep(3);
-		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
-		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		captureSuccessMessage();
 		crmPage.signOut();
 		
 	}
@@ -481,13 +474,152 @@ public class ClassTest extends BasicSetUp{
 		crmPage = callCenter.gotoCRMPage();
 		crmPage.gotoLeadLists();
 		crmPage.addLeadList(listName);
-		sleep(3);
-		writeText(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
-		System.out.println(driver.findElement(By.cssSelector("div.bottom-message > div.message-box.displayreport > span.message-text")).getText().toString());
+		captureSuccessMessage();
 		crmPage.signOut();
 	}
 	
 	
+	@Test(description = "Add CRM Field Test")
+	public void addCRMFieldTest() throws Exception {
+		String fieldName = prop.getProperty("new_CRMField");
+		String type= prop.getProperty("new_CRMField_type");
+		
+		login();
+		crmPage = callCenter.gotoCRMPage();
+		crmPage.gotoCRMFields();
+		crmPage.addCrmField(fieldName, type);
+		captureSuccessMessage();
+		crmPage.signOut();
+	}
+	
+	
+	@Test(description = "add Caller ID test")
+	public void callerIdTest() throws Exception{
+		String callerId = prop.getProperty("new_calledId");
+		String description = prop.getProperty("callerId_description");
+		String projectName= prop.getProperty("newProj_name");
+		
+		
+		login();
+		projectPage = callCenter.gotoProjectPage();
+		projectPage.gotoProject(projectName);
+		projectPage.gotoProjectCallerID();
+		projectPage.addCallerId(callerId, description);
+		captureSuccessMessage();
+		projectPage.signOut();
+		
+		
+	}
+	
+	public void testtest() throws Exception{
+		String ccemail = prop.getProperty("callcenteremail");
+		loginAdmin();
+		adminHomePage.enterCallCenter(ccemail);
+//		login();
+		String projectName = prop.getProperty("calledIdProject");
+		projectPage =adminHomePage.gotoProjectPage();
+		projectPage.gotoProject(projectName);
+//		projectPage.gotoProject("Project");
+		projectPage.gotoProjectCallerID();
+				
+	}
+	public void testtest2(String callerId, String description) throws Exception{
+		projectPage.addCallerId(callerId, description);
+	}
+	
+	@Test(description = "Upload tones test ")
+	public void uploadTonesTest() throws Exception{
+		String projectName= prop.getProperty("newProj_name");
+		String ringerMusicPath = prop.getProperty("ringer_music_path");
+		String ringerMusicID= prop.getProperty("ringer_music");
+		String connectMusicPath= prop.getProperty("connect_music_path");
+		String connectMusicID= prop.getProperty("connect_music");
+		String previewMusicPath = prop.getProperty("preview_music_path");
+		String previewMusicID = prop.getProperty("preview_music");
+		String failedMusicPath = prop.getProperty("failed_music_path");
+		String failedMusicID = prop.getProperty("failed_music");
+		String busyMusicPath = prop.getProperty("busy_music_path");
+		String busyMusicID = prop.getProperty("busy_music");
+		String connectChatMusicPath = prop.getProperty("connect_music_chat_path");
+		String connectChatMusicId = prop.getProperty("connect_music_chat");
+		String callinQueueMusicPath = prop.getProperty("call_in_queue_path");
+		String callinQueueMusicID = prop.getProperty("call_in_queue");
+		
+		
+		login();
+		projectPage = callCenter.gotoProjectPage();
+		projectPage.gotoProject(projectName);
+		projectPage.gotoProjectProjectTones();
+		projectPage.uploadProjectTones(ringerMusicPath, ringerMusicID);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(connectMusicPath, connectMusicID);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(previewMusicPath, previewMusicID);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(failedMusicPath, failedMusicID);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(busyMusicPath, busyMusicID);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(connectChatMusicPath, connectChatMusicId);
+		captureSuccessMessage();
+		projectPage.uploadProjectTones(callinQueueMusicPath, callinQueueMusicID);
+		captureSuccessMessage();
+		projectPage.signOut();
+	}
+	
+	@Test(description = "Remove Tones Test")
+	public void removeTonesTest() throws Exception {
+		String projectName= prop.getProperty("newProj_name");		
+		String ringerMusicID= prop.getProperty("ringer_music");		
+		String connectMusicID= prop.getProperty("connect_music");		
+		String previewMusicID = prop.getProperty("preview_music");		
+		String failedMusicID = prop.getProperty("failed_music");		
+		String busyMusicID = prop.getProperty("busy_music");		
+		String connectChatMusicId = prop.getProperty("connect_music_chat");		
+		String callinQueueMusicID = prop.getProperty("call_in_queue");
+		
+		login();
+		projectPage = callCenter.gotoProjectPage();
+		projectPage.gotoProject(projectName);
+		projectPage.gotoProjectProjectTones();
+		projectPage.removeProjectTones(ringerMusicID);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(connectMusicID);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(previewMusicID);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(failedMusicID);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(busyMusicID);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(connectChatMusicId);
+		captureSuccessMessage();
+		projectPage.removeProjectTones(callinQueueMusicID);
+		captureSuccessMessage();
+		projectPage.signOut();
+		
+		
+		
+	}
+	
+	
+	@Test(description  = "Get Agent portal Roles")
+	public void agentPortalRolesTest() throws Exception{
+		login();
+		advancePage = callCenter.gotoAdvancePage();
+		advancePage.gotoRoles();
+		advancePage.getAgentPortalRoles();
+		advancePage.signOut();
+	}
+	
+	@Test(description  = "Get Agent Client Roles")
+	public void agentClientRolesTest() throws Exception{
+		login();
+		advancePage = callCenter.gotoAdvancePage();
+		advancePage.gotoRoles();
+		advancePage.getAgentClientRoles();
+		advancePage.signOut();
+	}
 	
 	//==================================================================================================//
 	

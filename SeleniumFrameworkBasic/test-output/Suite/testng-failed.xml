@@ -5,9 +5,9 @@
     <classes>
       <class name="com.clogic.SeleniumFramework.ClassTest">
         <methods>
-          <include name="scrubLeadTest"/>
           <include name="setUp"/>
           <include name="tearDown"/>
+          <include name="newAccountCreationByAdminTest"/>
         </methods>
       </class> <!-- com.clogic.SeleniumFramework.ClassTest -->
     </classes>

@@ -72,6 +72,95 @@ public class ProjectPage extends BasicSetUp{
 		}
 	}
 	
+	public void uploadProjectTones(String path, String music) throws Exception{
+		try{
+			writeText("Uploading Project Tone.... @"+getDate());
+			System.out.println("Uploading Project Tone.... @"+getDate());
+			
+			 if(music.equals("RingerMusic")){ 
+					driver.findElement(By.id("RingerMusic")).sendKeys(path);
+					driver.findElement(By.id("RingerUpload")).click();
+			 }
+			 
+			 if(music.equals("ConnectMusic")){ 
+				 driver.findElement(By.id("ConnectMusic")).sendKeys(path);
+				 driver.findElement(By.id("ConnectUpload")).click();
+			 }
+			 if(music.equals("PreviewMusic")){ 
+				 driver.findElement(By.id("PreviewMusic")).sendKeys(path);
+				 driver.findElement(By.id("PreviewUpload")).click();
+			 }
+			 if(music.equals("FailedMusic")){ 
+				driver.findElement(By.id("FailedMusic")).sendKeys(path);
+				driver.findElement(By.id("FailedUpload")).click();
+			 }
+			 if(music.equals("BusyMusic")){
+				 driver.findElement(By.id("BusyMusic")).sendKeys(path);
+				 driver.findElement(By.id("BusyUpload")).click();
+			 }
+			 if(music.equals("ConnectChatMusic")){
+				 driver.findElement(By.id("ConnectChatMusic")).sendKeys(path);
+				 driver.findElement(By.id("ConnectChatUpload")).click();
+			 }
+			 if(music.equals("CallInQueueMusic")){
+				 driver.findElement(By.id("CallInQueueMusic")).sendKeys(path);
+				 driver.findElement(By.id("CallInQueueUpload")).click();
+			 }
+			 
+			 driver.findElement(By.cssSelector("input.but-gray")).click();
+		}
+		
+		catch(Exception e){
+			captureScreen("uploadProjectTones_error");
+			writeText("Error: While Uploading Project Tone.... @"+getDate());
+			System.out.println("Error: While Uploading Project Tone.... @"+getDate());
+		}
+	}
+	
+	public void removeProjectTones(String music) throws Exception{
+		try{
+			writeText("Uploading Project Tone.... @"+getDate());
+			System.out.println("Uploading Project Tone.... @"+getDate());
+			
+			 if(music.equals("RingerMusic")){ 
+				 driver.findElement(By.id("RingerRemove")).click();
+				 
+			 }
+			 
+			 if(music.equals("ConnectMusic")){ 
+				 driver.findElement(By.id("ConnectRemove")).click();
+				 
+			 }
+			 if(music.equals("PreviewMusic")){ 
+				 driver.findElement(By.id("PreviewRemove")).click();
+				
+			 }
+			 if(music.equals("FailedMusic")){ 
+				 driver.findElement(By.id("FailedRemove")).click();
+				
+			 }
+			 if(music.equals("BusyMusic")){
+				 driver.findElement(By.id("BusyRemove")).click();
+				
+			 }
+			 if(music.equals("ConnectChatMusic")){
+				 driver.findElement(By.id("ConnectChatRemove")).click();
+				
+			 }
+			 if(music.equals("CallInQueueMusic")){
+				 driver.findElement(By.id("CallInQueueRemove")).click();
+				
+			 }
+			 
+			 driver.findElement(By.cssSelector("input.but-gray")).click();
+		}
+		
+		catch(Exception e){
+			captureScreen("uploadProjectTones_error");
+			writeText("Error: While Uploading Project Tone.... @"+getDate());
+			System.out.println("Error: While Uploading Project Tone.... @"+getDate());
+		}
+	}
 	
 	public void gotoProject(String projectName) throws Exception{
 		
@@ -98,6 +187,28 @@ public class ProjectPage extends BasicSetUp{
 			captureScreen("gotoProject_error");
 			writeText("Error: While Moving inside "+projectName+".... @"+getDate());
 			System.out.println("Error: While Moving inside "+projectName+".... @"+getDate());
+		}
+	}
+	
+	
+	public void addCallerId(String callerId, String description) throws Exception{
+		try{
+			writeText("Adding CallerID.... @"+getDate());
+			System.out.println("Adding CallerID.... @"+getDate()); 
+			
+			new WebDriverWait(driver, 60).until(ExpectedConditions.presenceOfElementLocated(By.id("add")));
+			driver.findElement(By.id("add")).click();
+			driver.findElement(By.id("callerid-input")).clear();
+			driver.findElement(By.id("callerid-input")).sendKeys(callerId);
+			driver.findElement(By.id("callerid_expression")).clear();
+			driver.findElement(By.id("callerid_expression")).sendKeys(description);
+			driver.findElement(By.id("save.callerid.info")).click();
+		}
+		
+		catch(Exception e){
+			captureScreen("addCalledId_error");
+			writeText("Error: While Adding CallerID.... @"+getDate());
+			System.out.println("Error: While Adding CallerID.... @"+getDate());
 		}
 	}
 	
@@ -581,11 +692,13 @@ public class ProjectPage extends BasicSetUp{
 	public void gotoProjectCallerID() throws Exception{
 		try{
 			
-			writeText("Navigating to Caller ID Page...."+getDate());
-			System.out.println("Navigating to Caller ID Page...."+getDate());
+			
 			
 			new WebDriverWait(driver, 120).until(ExpectedConditions.presenceOfElementLocated(By.linkText("Caller ID")));
 			driver.findElement(By.linkText("Caller ID")).click();
+			
+			writeText("Navigating to Caller ID Page...."+getDate());
+			System.out.println("Navigating to Caller ID Page...."+getDate());
 		}
 		catch(Exception e){
 			captureScreen("gotoProjectCallerID_error_"+randoms);

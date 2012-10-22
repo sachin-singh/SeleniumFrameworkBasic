@@ -41,8 +41,12 @@
 <!-- 					<include name="bulkUpdateTest"></include> -->
 <!--               		<include name="addNewLeadTest"></include> -->
 <!--               		<include name="scrubLeadTest"></include> -->
-              		<include name="addLeadListTest"></include>
-               
+<!--               		<include name="addLeadListTest"></include> -->
+<!--                		<include name="addCRMFieldTest"></include> -->
+<!-- 						<include name="callerIdTest"></include> -->
+<!-- 						<include name="uploadTonesTest"></include> -->
+<!-- 						<include name="removeTonesTest"></include> -->
+							<include name="agentPortalRolesTest"></include>
           </methods>
           </class>
       

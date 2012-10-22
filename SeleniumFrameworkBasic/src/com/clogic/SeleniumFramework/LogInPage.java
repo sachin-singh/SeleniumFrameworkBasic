@@ -18,10 +18,10 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class LogInPage extends BasicSetUp{
 	
 	
-	protected final WebDriver driver;
+	public final WebDriver driver;
 	
 	/** Initial Web Address*/
-	protected String baseUrl; 
+	public String baseUrl; 
 	 
 	
 	/**
@@ -33,7 +33,7 @@ public class LogInPage extends BasicSetUp{
 	public LogInPage(WebDriver driver, String baseurl ) throws FileNotFoundException, IOException{
 		 
 		this.baseUrl=baseurl;
-		this.driver=driver;		
+		this.driver=driver;	
 		driver.get(baseUrl +"/ls");
 	}
 	
