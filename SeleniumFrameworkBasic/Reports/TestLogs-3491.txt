@@ -1,0 +1,7 @@
+Reading Config
+==========================================
+Test Started @ 2012/10/23 14:01:39
+Logging in as Admin.... @ 2012/10/23 14:01:44
+Entering in test@3clogic.com's Call Center.... @ 2012/10/23 14:01:52
+Error: While Entering in test@3clogic.com's Call Center.... @ 2012/10/23 14:02:20
+Navigating to CCHomePage.... @ 2012/10/23 14:02:20

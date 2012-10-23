@@ -74,7 +74,7 @@ public class BasicSetUp {
 		FileWriter fWriter = null;
 		BufferedWriter writer = null;		
 			try {
-					fWriter = new FileWriter("TestLogs-"+randoms+".txt", true);
+					fWriter = new FileWriter("Reports//TestLogs-"+randoms+".txt", true);
 					writer = new BufferedWriter(fWriter);
 					writer.append(s);
 					writer.newLine();

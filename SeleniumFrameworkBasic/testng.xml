@@ -32,7 +32,7 @@
 <!-- 					<include name="createProjectTest"></include> -->
 <!-- 					<include name="createAgentTest"></include> -->
 <!-- 					<include name="assignAgentTest"></include> -->
-<!-- 					<include name="buyPackageTest"></include> -->
+					<include name="buyPackageTest"></include>
 <!-- 					<include name="assignPackageTest"></include> -->
 <!-- 					<include name="importLeadsTest"></include> -->
 <!-- 					<include name="assignLeadsTest"></include> -->
@@ -46,7 +46,7 @@
 <!-- 						<include name="callerIdTest"></include> -->
 <!-- 						<include name="uploadTonesTest"></include> -->
 <!-- 						<include name="removeTonesTest"></include> -->
-							<include name="agentPortalRolesTest"></include>
+<!-- 							<include name="agentPortalRolesTest"></include> -->
           </methods>
           </class>
       
