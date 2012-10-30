@@ -2,7 +2,7 @@
 
 <html>
   <head>
-  <title>TestNG new reports</title>
+  <title>TestNG reports</title>
 
     <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
     <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
@@ -48,7 +48,7 @@
               <ul>
                 <li>
                   <a href="#" class="navigator-link " panel-name="test-xml-Suite">
-                    <span>G:\Eclipse\GitRepositories\SeleniumFrameWorkBasic\SeleniumFrameworkBasic\testng.xml</span>
+                    <span>D:\Sachin\Git\SeleniumFrameworkBasic\SeleniumFrameworkBasic\testng.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -101,7 +101,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.clogic.SeleniumFramework.ClassTest" hash-for-method="agentPortalRolesTest">agentPortalRolesTest</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="com.clogic.SeleniumFramework.ClassTest" hash-for-method="newAccountCreationTest">newAccountCreationTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -124,9 +124,11 @@
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="agentPortalRolesTest">
-                  </a> <!-- agentPortalRolesTest -->
-                  <span class="method-name">agentPortalRolesTest</span>
+                  <a name="newAccountCreationTest">
+                  </a> <!-- newAccountCreationTest -->
+                  <span class="method-name">newAccountCreationTest</span>
+                  <em>
+(NewAccountCreation)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -134,18 +136,18 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">G:\Eclipse\GitRepositories\SeleniumFrameWorkBasic\SeleniumFrameworkBasic\testng.xml</span>
+            <span class="header-content">D:\Sachin\Git\SeleniumFrameworkBasic\SeleniumFrameworkBasic\testng.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; parallel=&quot;none&quot;&gt;
-  &lt;test name=&quot;Test&quot; preserve-order=&quot;true&quot;&gt;
+  &lt;test name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;com.clogic.SeleniumFramework.ClassTest&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;agentPortalRolesTest&quot;/&gt;
+          &lt;include name=&quot;newAccountCreationTest&quot;/&gt;
         &lt;/methods&gt;
       &lt;/class&gt; &lt;!-- com.clogic.SeleniumFramework.ClassTest --&gt;
     &lt;/classes&gt;
@@ -189,14 +191,14 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'agentPortalRolesTest')
+data.setCell(0, 1, 'newAccountCreationTest')
 data.setCell(0, 2, 'com.clogic.SeleniumFramework.ClassTest')
-data.setCell(0, 3, 997276);
+data.setCell(0, 3, 99655);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 16 minutes</span>
+              <span class="suite-total-time">Total running time: 1 minutes</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -211,7 +213,7 @@ return data;
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">30 ignored methods</span>
+            <span class="header-content">31 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="ignored-class-div">
@@ -249,11 +251,13 @@ return data;
                 <br/>
                 <span class="ignored-method-name">newAccountCreationByAdminTest</span>
                 <br/>
+                <span class="ignored-method-name">agentClientRolesTest</span>
+                <br/>
                 <span class="ignored-method-name">importLeadsTest</span>
                 <br/>
-                <span class="ignored-method-name">createCallCenterTest</span>
+                <span class="ignored-method-name">agentPortalRolesTest</span>
                 <br/>
-                <span class="ignored-method-name">newAccountCreationTest</span>
+                <span class="ignored-method-name">createCallCenterTest</span>
                 <br/>
                 <span class="ignored-method-name">newTest</span>
                 <br/>
@@ -293,12 +297,12 @@ return data;
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-suite before -->
               <div class="test-method">
-                <span class="method-name">agentPortalRolesTest</span>
-                <span class="method-start">14858 ms</span>
+                <span class="method-name">newAccountCreationTest</span>
+                <span class="method-start">15442 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-suite after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">1012188 ms</span>
+                <span class="method-start">115138 ms</span>
               </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

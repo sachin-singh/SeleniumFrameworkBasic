@@ -113,7 +113,7 @@ public class ClassTest extends BasicSetUp{
 	public void newAccountCreationTest() throws Exception{
 		
 		String email =prop.getProperty("newcc_email")	;
-		String fullName =prop.getProperty("newcc_name");
+		String fullName =prop.getProperty("newcc_fullname");
 		String password=prop.getProperty("newcc_password");
 		String title=prop.getProperty("newcc_title");
 		String organization=prop.getProperty("newcc_org");
@@ -123,7 +123,7 @@ public class ClassTest extends BasicSetUp{
 		String postalCode=prop.getProperty("newcc_postal");
 		String country=prop.getProperty("newcc_country");
 		String phone=prop.getProperty("newcc_phone");
-		String recommendation =prop.getProperty("newcc_recommedation");
+		String recommendation =prop.getProperty("newcc_recommendation");
 		String serverId = prop.getProperty("serverId");
 		int cc_type= new Integer((prop.getProperty("cc_type")));
 		

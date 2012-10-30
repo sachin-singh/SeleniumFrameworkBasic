@@ -16,23 +16,14 @@
       
       <class name="com.clogic.SeleniumFramework.ClassTest">
           <methods>
-<!--               <include name="ClassTest"></include> -->
-<!--               <include name="login"></include> -->
-<!--               <include name="loginAdmin"></include> -->
-<!--               <include name=" newAccountCreation"></include> -->
-<!--               <include name="deleteProject"></include> -->
-<!--                    <include name="assignAllAgent"></include> -->
-<!-- 					<include name="assignLeads"></include> -->
-<!-- 					<include name="testDialPlan"></include> -->
-<!-- 					<include name="verifyRoles"></include> -->
 <!-- 					<include name="newAccountCreationTest"></include> -->
 <!-- 					<include name="newAccountCreationByAdminTest"></include> -->
 <!-- 					<include name="createCallCenterTest"></include> -->
 <!-- 					<include name="updateCallCenterProfileTest"></include> -->
-<!-- 					<include name="createProjectTest"></include> -->
-<!-- 					<include name="createAgentTest"></include> -->
-<!-- 					<include name="assignAgentTest"></include> -->
-					<include name="buyPackageTest"></include>
+					<include name="createProjectTest"></include>
+					<include name="createAgentTest"></include>
+					<include name="assignAgentTest"></include>
+<!-- 					<include name="buyPackageTest"></include> -->
 <!-- 					<include name="assignPackageTest"></include> -->
 <!-- 					<include name="importLeadsTest"></include> -->
 <!-- 					<include name="assignLeadsTest"></include> -->
